@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Test-micro-order-service
+  name: test-micro-order-service
   description: Test-micro
   annotations:
     github.com/project-slug: sivakrishna-avvaru/test-micro-service

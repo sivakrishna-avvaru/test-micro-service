@@ -4,7 +4,7 @@ metadata:
   name: Test-micro-order-service
   description: Test-micro
   annotations:
-    github.com/project-slug: ramannkhanna2/test-micro-service
+    github.com/project-slug: sivakrishna-avvaru/test-micro-service
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service

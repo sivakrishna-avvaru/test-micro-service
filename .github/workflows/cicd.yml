@@ -57,7 +57,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/Test-micro-order-service:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/test-micro-order-service:latest
 
       - name: Install Trivy
         run: |
@@ -69,7 +69,7 @@ jobs:
           sudo apt-get install -y trivy
 
       - name: Run Trivy Scan
-        run: trivy image --format json --output trivy-report.json ${{ secrets.DOCKERHUB_USERNAME }}/Test-micro-order-service:latest
+        run: trivy image --format json --output trivy-report.json ${{ secrets.DOCKERHUB_USERNAME }}/test-micro-order-service:latest
         continue-on-error: true
 
   dast-scan:
@@ -80,10 +80,10 @@ jobs:
       - uses: docker/setup-buildx-action@v3
 
       - name: Build Docker Image
-        run: docker build -t Test-micro-order-service .
+        run: docker build -t test-micro-order-service .
 
       - name: Run Container
-        run: docker run -d -p 5000:5000 --name Test-micro-order-service Test-micro-order-service
+        run: docker run -d -p 5000:5000 --name test-micro-order-service test-micro-order-service
 
       - name: Wait for App
         run: |
@@ -103,6 +103,6 @@ jobs:
       - name: Stop & Remove Container
         if: always()
         run: |
-          docker stop Test-micro-order-service || true
-          docker rm Test-micro-order-service || true
+          docker stop test-micro-order-service || true
+          docker rm test-micro-order-service || true
 

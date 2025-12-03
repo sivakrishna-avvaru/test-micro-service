@@ -5,8 +5,8 @@ metadata:
   description: Test-micro
   annotations:
     github.com/project-slug: sivakrishna-avvaru/test-micro-service
-    grafana/dashboard-url: http://98.88.81.78:3001/d/isFoa0z7k/grafana-metrics
-    grafana/dashboard-selector: grafana
+    grafana/dashboard-url: http://98.88.81.78:3001/d/ad9p49q/giribabu-micros
+    grafana/dashboard-selector: giribabu-micro
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
